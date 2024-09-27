@@ -12,4 +12,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the web service on container startup.
-CMD ["hypercorn", "main:app", "--bind", "::"]
+# CMD ["hypercorn", "main:app", "--bind", "::"]
+
+# Command to run the application with automatic reload
+CMD ["hypercorn", "main:app", "--reload", "--bind", "::", "--port", "8080"]
