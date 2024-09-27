@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # CMD ["hypercorn", "main:app", "--bind", "::"]
 
 # Command to run the application with automatic reload
-CMD ["hypercorn", "main:app", "--reload", "--bind", "0.0.0.0", "--port", "8080"]
+CMD ["hypercorn", "main:app", "--reload", "--bind", "0.0.0.0"]
