@@ -12,4 +12,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the web service on container startup.
-CMD ["hypercorn", "main:app", "--host", "::"]
+CMD ["hypercorn", "main:app", "--bind", "[::]:8000"]
